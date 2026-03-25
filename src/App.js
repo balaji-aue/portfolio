@@ -1,42 +1,48 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
-import Hero from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Education from './components/Education';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import AboutPage from './pages/AboutPage';
+import ExperiencePage from './pages/ExperiencePage';
+import ProjectsPage from './pages/ProjectsPage';
+import EducationPage from './pages/EducationPage';
+import ContactPage from './pages/ContactPage';
+import Game from './pages/Game';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App dark-theme">
-      <nav className="primary-nav">
-        <div className="container nav-inner">
-          <div className="brand">Balaji Palanisamy</div>
-          <div className="nav-links">
-            <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
+    <Router>
+      <div className="App dark-theme">
+        <nav className="primary-nav">
+          <div className="container nav-inner">
+            <div className="brand">Balaji Palanisamy</div>
+            <div className="nav-links">
+              <Link to="/">Home</Link>
+              <Link to="/about">About</Link>
+              <Link to="/experience">Experience</Link>
+              <Link to="/projects">Projects</Link>
+              <Link to="/education">Education</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/game">Game</Link>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Education />
-        <Contact />
-      </main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/education" element={<EducationPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/game" element={<Game />} />
+        </Routes>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

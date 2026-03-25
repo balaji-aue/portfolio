@@ -101,6 +101,80 @@ h1{font-size:2.1rem;margin:0 0 6px 0}
 
 .site-footer{padding:22px 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
 
+.game {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.board {
+  display: inline-block;
+  margin: 20px auto;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+.square:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.contact-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 5px;
+  background: var(--card);
+  color: var(--text);
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 10px;
+  background: var(--accent);
+  color: #062023;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact-form button:hover {
+  background: var(--accent-2);
+}
+
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr;}
   .nav-links{display:none}
