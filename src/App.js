@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <div className="App dark-theme">
         <nav className="primary-nav">
           <div className="container nav-inner">
